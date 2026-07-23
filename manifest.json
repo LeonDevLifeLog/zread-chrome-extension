@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub → zread.ai",
+  "version": "1.0.0",
+  "description": "在 GitHub 仓库页面注入高亮按钮，一键在新标签页跳转到对应的 zread.ai 页面（仅将 github.com 替换为 zread.ai，其余路径保持不变）。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["https://github.com/*", "https://zread.ai/*"]
+}
