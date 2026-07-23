@@ -1,0 +1,59 @@
+name: 🐛 Bug report
+description: 报告按钮不显示、位置错误、跳转异常等问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填写完整，便于我们快速复现与修复。
+  - type: input
+    id: repo-url
+    attributes:
+      label: 出问题的仓库 URL
+      description: 例如 https://github.com/hwameistor/hwameistor
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器及版本
+      description: 例如 Chrome 126.0.0.0 / Edge 126.0.0.0
+      placeholder: Chrome 126.0.0.0
+    validations:
+      required: true
+  - type: input
+    id: ext-version
+    attributes:
+      label: 扩展版本
+      description: 在 chrome://extensions 卡片中查看（manifest.json 的 version）
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么？
+      description: 按钮未出现 / 出现在错误位置 / 跳转地址错误等，请描述具体现象
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 一步一步的操作，便于我们复现
+      placeholder: |
+        1. 打开 XXX 仓库
+        2. 观察页头操作区
+        3. 发现……
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      description: 你认为正确的表现应该是什么
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息（可选）
+      description: 截图、控制台报错、扩展设置等
